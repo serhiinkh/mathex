@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/mathex/static/css/main.5efd931c.css",
+    "main.js": "/mathex/static/js/main.7e1c5291.js",
+    "static/js/787.ba9a4b72.chunk.js": "/mathex/static/js/787.ba9a4b72.chunk.js",
+    "index.html": "/mathex/index.html",
+    "main.5efd931c.css.map": "/mathex/static/css/main.5efd931c.css.map",
+    "main.7e1c5291.js.map": "/mathex/static/js/main.7e1c5291.js.map",
+    "787.ba9a4b72.chunk.js.map": "/mathex/static/js/787.ba9a4b72.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5efd931c.css",
+    "static/js/main.7e1c5291.js"
+  ]
+}
