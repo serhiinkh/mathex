@@ -1,22 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Expression from './Expression';
+import Confetti from 'react-confetti'
+import { useState } from 'react';
+import useWindowSize from 'react-use/lib/useWindowSize'
 
 function App() {
+
+  const [showConfetti, setShowConfetti] = useState(false);
+  const { width, height } = useWindowSize()
+  const expressions = Array.from({ length: 10 }).map((_, i) => {
+    return <Expression key={i} onCorrect={() => setShowConfetti(true)} />
+  })
+
   return (
     <div className="App">
+      <Confetti
+        width={width}
+        height={height}
+        style={{ pointerEvents: 'none' }}
+        numberOfPieces={showConfetti ? 500 : 0}
+        recycle={false}
+        onConfettiComplete={confetti => {
+          confetti.reset()
+          setShowConfetti(false);
+        }}
+      />
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {expressions}
       </header>
     </div>
   );

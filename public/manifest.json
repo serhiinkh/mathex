@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Simple math expressions",
+  "name": "Simple math expressions",
   "icons": [
     {
       "src": "favicon.ico",
